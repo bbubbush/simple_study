@@ -1,4 +1,4 @@
-package com.tistory.bbubbush.defaultFI;
+package com.tistory.bbubbush.defaultfi;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;

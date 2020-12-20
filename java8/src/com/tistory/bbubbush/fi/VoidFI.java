@@ -1,4 +1,4 @@
-package com.tistory.bbubbush.FI;
+package com.tistory.bbubbush.fi;
 
 @FunctionalInterface
 public interface VoidFI {
