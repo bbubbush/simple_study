@@ -9,7 +9,7 @@ public class TestSetTest {
     private final int SIZE = 1_000_000;
 
     @Test
-    @DisplayName("HashSet의 속도 테스트 (삽입 / 조회 / 정렬)")
+    @DisplayName("HashSet의 속도 테스트 (삽입/조회/정렬)")
     public void checkTimeToHashSet() {
         long addDataTime = Timer.checkMilliTime(() -> SetBehavior.addInHashSet(SIZE));
         System.out.println("add data in HashSet : " + addDataTime);
@@ -22,7 +22,7 @@ public class TestSetTest {
     }
 
     @Test
-    @DisplayName(value = "LinkedHashSet의 속도 테스트 (삽입 / 조회 / 정렬)")
+    @DisplayName(value = "LinkedHashSet의 속도 테스트 (삽입/조회/정렬)")
     public void checkTimeToLinkedHashSet() {
         long addDataTime = Timer.checkMilliTime(() -> SetBehavior.addInLinkedHashSet(SIZE));
         System.out.println("add data in LinkedHashSet : " + addDataTime);
@@ -35,7 +35,7 @@ public class TestSetTest {
     }
 
     @Test
-    @DisplayName(value = "TreeSet의 속도 테스트 (삽입 / 조회 / 정렬)")
+    @DisplayName(value = "TreeSet의 속도 테스트 (삽입/조회/정렬)")
     public void checkTimeToTreeSet() {
         long addDataTime = Timer.checkMilliTime(() -> SetBehavior.addInTreeSet(SIZE));
         System.out.println("add data in TreeSet : " + addDataTime);
