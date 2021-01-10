@@ -31,13 +31,7 @@ public class SetBehavior {
         treeSet.forEach(s -> {});
     }
 
-    public static void hashSetSorted() {
-        hashSet.stream().sorted(Comparator.reverseOrder());
-    }
-    public static void linkedHashSetSorted() {
-        linkedHashSet.stream().sorted(Comparator.reverseOrder());
-    }
-    public static void treeSetSorted() {
-        treeSet.stream().sorted(Comparator.reverseOrder());
-    }
+    public static void containsInHashSet(String value) { hashSet.contains(value); }
+    public static void containsInLinkedHashSet(String value) { linkedHashSet.contains(value); }
+    public static void containsInTreeSet(String value) { treeSet.contains(value); }
 }
