@@ -7,40 +7,40 @@ import java.util.TreeSet;
 import java.util.stream.IntStream;
 
 public class SetBehavior {
-    private final static Set<String> hashSet = new HashSet<>();
-    private final static Set<String> linkedHashSet = new LinkedHashSet<>();
-    private final static Set<String> treeSet = new TreeSet<>();
+    private final static Set<Integer> hashSet = new HashSet<>();
+    private final static Set<Integer> linkedHashSet = new LinkedHashSet<>();
+    private final static Set<Integer> treeSet = new TreeSet<>();
     
     public static void addInHashSet(final int size) {
         IntStream.range(0, size)
-                .forEach(value -> hashSet.add(String.valueOf(value)));
+                .forEach(hashSet::add);
     }
     public static void addInLinkedHashSet(final int size) {
         IntStream.range(0, size)
-                .forEach(value -> linkedHashSet.add(String.valueOf(value)));
+                .forEach(linkedHashSet::add);
     }
     public static void addInTreeSet(final int size) {
         IntStream.range(0, size)
-                .forEach(value -> treeSet.add(String.valueOf(value)));
+                .forEach(treeSet::add);
     }
 
     public static void getAllInHashSet() {
-        hashSet.forEach(value -> hashSet.contains(value));
+        hashSet.forEach(hashSet::contains);
     }
     public static void getAllInLinkedHashSet() {
-        linkedHashSet.forEach(value -> linkedHashSet.contains(value));
+        linkedHashSet.forEach(linkedHashSet::contains);
     }
     public static void getAllInTreeSet() {
-        treeSet.forEach(value -> treeSet.contains(value));
+        treeSet.forEach(treeSet::contains);
     }
 
     public static void removeAllInHashSet() {
-        hashSet.removeIf(value -> !value.isEmpty());
+        hashSet.removeIf(value -> value > 0);
     }
     public static void removeAllInLinkedHashSet() {
-        linkedHashSet.removeIf(value -> !value.isEmpty());
+        linkedHashSet.removeIf(value -> value > 0);
     }
     public static void removeAllInTreeSet() {
-        treeSet.removeIf(value -> !value.isEmpty());
+        treeSet.removeIf(value -> value > 0);
     }
 }

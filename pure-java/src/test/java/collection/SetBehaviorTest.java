@@ -6,7 +6,7 @@ import util.Timer;
 
 @DisplayName(value = "Set 인터페이스 속도 테스트")
 public class SetBehaviorTest {
-    private final int SIZE = 2_000_000;
+    private final int SIZE = 10_000_000;
 
     @Test
     @DisplayName("HashSet의 속도 테스트 (삽입/조회/삭제)")
@@ -17,7 +17,7 @@ public class SetBehaviorTest {
         long getDataTime = Timer.checkMilliTime(SetBehavior::getAllInHashSet);
         System.out.println("get all date in HashSet : " + getDataTime);
 
-        long removeTime = Timer.checkMilliTime(() -> SetBehavior.removeAllInHashSet());
+        long removeTime = Timer.checkMilliTime(SetBehavior::removeAllInHashSet);
         System.out.println("remove all data in HashSet : " + removeTime);
     }
 
@@ -30,7 +30,7 @@ public class SetBehaviorTest {
         long getDataTime = Timer.checkMilliTime(SetBehavior::getAllInLinkedHashSet);
         System.out.println("get all date in LinkedHashSet : " + getDataTime);
 
-        long removeTime = Timer.checkMilliTime(() -> SetBehavior.removeAllInLinkedHashSet());
+        long removeTime = Timer.checkMilliTime(SetBehavior::removeAllInLinkedHashSet);
         System.out.println("remove all data in LinkedHashSet : " + removeTime);
     }
 
@@ -43,7 +43,7 @@ public class SetBehaviorTest {
         long getDataTime = Timer.checkMilliTime(SetBehavior::getAllInTreeSet);
         System.out.println("get all date in TreeSet : " + getDataTime);
 
-        long removeTime = Timer.checkMilliTime(() -> SetBehavior.removeAllInTreeSet());
+        long removeTime = Timer.checkMilliTime(SetBehavior::removeAllInTreeSet);
         System.out.println("remove all data in TreeSet : " + removeTime);
     }
 }
