@@ -17,8 +17,8 @@ public class SetBehaviorTest {
         long getDataTime = Timer.checkMilliTime(SetBehavior::getAllInHashSet);
         System.out.println("get all date in HashSet : " + getDataTime);
 
-        long containsTime = Timer.checkMilliTime(() -> SetBehavior.removeAllInHashSet());
-        System.out.println("remove all data in HashSet : " + containsTime);
+        long removeTime = Timer.checkMilliTime(() -> SetBehavior.removeAllInHashSet());
+        System.out.println("remove all data in HashSet : " + removeTime);
     }
 
     @Test
@@ -30,8 +30,8 @@ public class SetBehaviorTest {
         long getDataTime = Timer.checkMilliTime(SetBehavior::getAllInLinkedHashSet);
         System.out.println("get all date in LinkedHashSet : " + getDataTime);
 
-        long containsTime = Timer.checkMilliTime(() -> SetBehavior.removeAllInLinkedHashSet());
-        System.out.println("remove all data in LinkedHashSet : " + containsTime);
+        long removeTime = Timer.checkMilliTime(() -> SetBehavior.removeAllInLinkedHashSet());
+        System.out.println("remove all data in LinkedHashSet : " + removeTime);
     }
 
     @Test
@@ -43,7 +43,7 @@ public class SetBehaviorTest {
         long getDataTime = Timer.checkMilliTime(SetBehavior::getAllInTreeSet);
         System.out.println("get all date in TreeSet : " + getDataTime);
 
-        long containsTime = Timer.checkMilliTime(() -> SetBehavior.removeAllInTreeSet());
-        System.out.println("remove all data in TreeSet : " + containsTime);
+        long removeTime = Timer.checkMilliTime(() -> SetBehavior.removeAllInTreeSet());
+        System.out.println("remove all data in TreeSet : " + removeTime);
     }
 }
