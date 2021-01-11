@@ -1,6 +1,7 @@
 package collection;
 
 import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class SetBehavior {
@@ -21,17 +22,11 @@ public class SetBehavior {
                 .forEach(value -> treeSet.add(String.valueOf(value)));
     }
 
-    public static void getAllInHashSet() {
-        hashSet.forEach(s -> {});
-    }
-    public static void getAllInLinkedHashSet() {
-        linkedHashSet.forEach(s -> {});
-    }
-    public static void getAllInTreeSet() {
-        treeSet.forEach(s -> {});
-    }
+    public static void getAllInHashSet() { hashSet.forEach(value -> hashSet.contains(value)); }
+    public static void getAllInLinkedHashSet() { linkedHashSet.forEach(value -> linkedHashSet.contains(value)); }
+    public static void getAllInTreeSet() { treeSet.forEach(value -> treeSet.contains(value)); }
 
-    public static void containsInHashSet(String value) { hashSet.contains(value); }
-    public static void containsInLinkedHashSet(String value) { linkedHashSet.contains(value); }
-    public static void containsInTreeSet(String value) { treeSet.contains(value); }
+    public static void removeAllInHashSet() { hashSet.removeIf(value -> !value.isEmpty()); }
+    public static void removeAllInLinkedHashSet() { linkedHashSet.removeIf(value -> !value.isEmpty()); }
+    public static void removeAllInTreeSet() { treeSet.removeIf(value -> !value.isEmpty()); }
 }
