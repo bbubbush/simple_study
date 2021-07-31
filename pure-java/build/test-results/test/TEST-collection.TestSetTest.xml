@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Set 인터페이스 속도 테스트" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-01-09T14:08:16" hostname="isanghun-ui-MacBook-Pro.local" time="2.994">
+  <properties/>
+  <testcase name="LinkedHashSet의 속도 테스트 (삽입 / 조회 / 정렬)" classname="collection.TestSetTest" time="0.622"/>
+  <testcase name="TreeSet의 속도 테스트 (삽입 / 조회 / 정렬)" classname="collection.TestSetTest" time="0.887"/>
+  <testcase name="HashSet의 속도 테스트 (삽입 / 조회 / 정렬)" classname="collection.TestSetTest" time="1.482"/>
+  <system-out><![CDATA[add data in LinkedHashSet : 573
+get all date in LinkedHashSet : 24
+LinkedHashSet sort : 0
+add data in TreeSet : 851
+get all date in TreeSet : 32
+TreeSet sort : 0
+add data in HashSet : 1445
+get all date in HashSet : 33
+HashSet sort : 0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
